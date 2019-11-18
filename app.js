@@ -8,7 +8,7 @@ const mesaRoutes = require('./api/routes/mesas');
 const itemRoutes = require('./api/routes/items');
 const pedidoRoutes = require('./api/routes/pedidos');
 const barraRoutes = require('./api/routes/barras');
-const usuarioRoutes = require('./api/routes/usuario');
+const usuarioRoutes = require('./api/routes/usuarios');
 
 mongoose.connect(
   'mongodb+srv://takemyorder:'
@@ -43,7 +43,7 @@ app.use('/mesas', mesaRoutes);
 app.use('/items', itemRoutes);
 app.use('/pedidos', pedidoRoutes);
 app.use('/barras', barraRoutes);
-app.use('/usuario', usuarioRoutes);
+app.use('/usuarios', usuarioRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Algo no está bien');
